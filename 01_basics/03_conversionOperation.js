@@ -28,3 +28,30 @@ let stringNumber = String(Number)
 console.log(stringNumber)
 console.log(typeof stringNumber);
 
+// **********************OPERATIONS***********************
+
+let value = 5
+let negvalue = -value
+console.log(negvalue)
+
+let str1 = "hello"
+let str2 = " bro"
+let str3 = str1 + str2 
+console.log(str3);
+
+console.log("1" + 2);
+console.log(1 + "2");
+console.log("1" + 2 + 2);
+console.log(1 + 2 + "2");
+
+console.log(+true);
+console.log(+"");
+
+ 
+
+
+
+
+
+
+
