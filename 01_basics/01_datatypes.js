@@ -24,7 +24,3 @@ let state;
 
 console.log(typeof undefined); // OUTPUT: undefined
 console.log(typeof null); // OUTPUT: object
-
-
-
-
