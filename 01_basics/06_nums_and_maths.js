@@ -36,4 +36,4 @@ console.log(Math.floor(Math.random()*10) + 1); //floor rounds off to single valu
 const min = 10
 const max = 20
 
-console.log(Math.floor(Math.random() * (max-min+1)) + min);
+console.log(Math.floor(Math.random() * (max-min+1)) + min); // finds value between 10 and 20
