@@ -22,7 +22,7 @@ console.log(jsuser.email); //accessing object value (mostly used method)
 console.log(jsuser["age"]); //accessing object value (this method is used sometimes only in special cases)
 console.log(jsuser["full_name"]); //accessing object value
 
-console.log(jsuser[symbo]); //accessing object value which is a symbol
+console.log(jsuser[symbo]); //accessing object value which is a symbol, notice that there is no " " 
 
 jsuser.email = "hasan@micro.com"
 //Object.freeze(jsuser) //prevents making changes in keys of object. 
