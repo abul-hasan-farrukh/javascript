@@ -10,6 +10,8 @@
 // share the same references (point to the same underlying values) as 
 // those of the source object from which the copy was made. 
 
+// Arrays in JavaScript can store values of any data type. 
+
 const myArray = [1, 2, 3, 4, 5]
 console.log(myArray[3]);
 
@@ -43,4 +45,4 @@ console.log("B->", myArray);
 
 const arr2 = myArray.splice(0, 3) //manipulates the original array i.e it removes the portion specified in splice(). 
 console.log("C->", myArray);
-console.log(arr2);
+console.log(arr2); 
