@@ -6,8 +6,10 @@
 
 // Object.create() // Creating object using Constructor 
 
-//Creating symbol
+const tendu = new Object() //sigleton object.
+const tendua = {} //non singleton object.
 
+//Creating symbol
 const symbo = Symbol("key1")
 
 const jsuser = {
