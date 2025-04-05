@@ -32,7 +32,8 @@ const obj5 = {...obj1, ...obj2} // spreading of objects in a single object
 console.log(obj3);
 console.log(obj4);
 console.log(obj5);
-
+ 
+// When we work with database we get data in an array of objects. Like the below one.  
 const users = [
     {
         id: 123,
@@ -47,7 +48,7 @@ const users = [
 console.log(users[1].email);
 console.log(Object.keys(tinderUser)); // grabs keys of objects in an array
 console.log(Object.values(tinderUser)); // grabs keys of objects in an array
-console.log(Object.entries(tinderUser)); // grabs each key and value of object in a single array
+console.log(Object.entries(tinderUser)); // grabs each key and value of object and stores it in a single array
  
 console.log(tinderUser.hasOwnProperty('isLogged')); //returns a boolean value, used to check whether a value is present or not.
 
