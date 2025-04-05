@@ -52,3 +52,44 @@ console.log(Object.entries(tinderUser)); // grabs each key and value of object a
  
 console.log(tinderUser.hasOwnProperty('isLogged')); //returns a boolean value, used to check whether a value is present or not.
 
+//Destructuring of Objects starts from here: 
+// Destructuring is mostly used in ReactJS
+
+const course = {
+    coursename: "JS in Hindi",
+    price: 99,
+    Instructor: "hiteshbhai", 
+}
+
+//console.log(course.Instructor) //mehod of accessing object value
+
+const {Instructor} = course //another popular way of accessing object's value
+console.log(Instructor); ////same output
+
+const {Instructor: teacher} = course //another way of accessing object's value
+console.log(teacher); //same output
+
+//demo of react prop, when we need to destructure it.  
+const navbar = ({company}) => {
+
+}
+
+navbar(company = "hasan")
+// react demo ends here
+
+//destructuring of array is rare
+
+//concept of APIs
+//Objcets without name is called JavaScript Object Notation (JSON) 
+// {
+//     "name": "hasan",
+//     "age": 21,
+//     "course": "MCA"
+// }
+
+//sometimes APIs provide data in the form of array of objects
+[
+    {},
+    {},
+    {},
+] 
