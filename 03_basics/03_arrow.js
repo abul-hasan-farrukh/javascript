@@ -29,7 +29,7 @@ console.log(this); //In node environment this will give empty object output. But
 // } 
 
 
-const chai =  () => {
+const chai =  () => { //this keyword is not used in arrow function.
     let username = "Hasan"
     console.log(this);
 } 
