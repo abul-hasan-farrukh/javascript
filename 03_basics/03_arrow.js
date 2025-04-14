@@ -46,4 +46,4 @@ const addtwoo = (num1, num2) => (num1+num2) // this is implicit return arrow fun
 
 const addtwooo = (num1, num2) => ({username: "Hasan"}) // returning object via implicit arrow function
     
-console.log(addtwoo(12,3));
+console.log(addtwooo(2,8));
