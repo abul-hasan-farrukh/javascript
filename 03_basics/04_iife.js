@@ -5,7 +5,7 @@
 
 (function tea () { //This is named (tea) IIFE
     console.log(`Database Connected`);    
-} ) (); //calling function immediately by wrapping the function in parentheses() .
+} ) (); //calling function immediately by wrapping the function in parentheses() and stopping it using ; .
 
 ( (name) => {
     console.log(`DB Connected ${name}`);    
