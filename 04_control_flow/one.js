@@ -56,3 +56,4 @@ if (loggedInFromGoogle || loggedInFromEmail) {
     console.log("User can log In");    
 }
 
+
