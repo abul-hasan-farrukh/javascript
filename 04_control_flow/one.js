@@ -53,6 +53,6 @@ if (userLoggedIn && debitard) { //&& checks both condition are true or not
 } 
 
 if (loggedInFromGoogle || loggedInFromEmail) {
-    console.log("User can log In");
-    
+    console.log("User can log In");    
 }
+
