@@ -1,5 +1,7 @@
 //for-each loop
 
+//for each loop doesn't return any value. 
+
 const coding = ["java", "ruby", "python"]
 
 // coding.forEach( function (item) {
