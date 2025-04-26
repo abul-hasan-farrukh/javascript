@@ -1,0 +1,20 @@
+//map and map chaining in JS.
+const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const newNums = myNums.map( (num) => num + 20)  
+console.log(newNums);
+
+
+const newNumz = myNums.map( (num) => {
+    return num + 10 //using return keyword because of {}
+})  
+console.log(newNumz);
+
+//Chaining of map
+
+const numz = myNums
+
+.map( (num) => num * 10 )
+.map( (num) => num +  1 )
+.filter( (num) => num >= 40)
+console.log(numz);
