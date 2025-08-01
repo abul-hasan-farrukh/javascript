@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Creating and Displaying HTML Elements</title>
+</head>
+<body style="background-color: black; color: yellow;">
+    
+</body>
+<script>
+    const div = document.createElement("div"); // It creates an HTML element "div".
+    console.log(div);
+    div.className = "main" // It adds a class to the div element.
+    div.id = Math.round(Math.random() * 10 + 1) // It adds an id to the div element.
+    div.setAttribute("title", "Page Title") // It adds a title to the div element and it accepts values in key value pair.
+    div.style.backgroundColor = "Blue" // It adds a background color to the div element.
+    div.style.padding = "10px" // It adds a padding of 10px to the div element.
+   // div.innerText = "Learning JavaScript Relations" // It adds the specified text inside the div element. 
+    // It is not a preferred way by good developers for optimization because it overrides the existing value. 
+    // So setAttribute() is preferred, because it does not overrides and sets values directly.
+    const addText = document.createTextNode("Learning JS Relations and Create Element"); // It also adds a text inside the div element.
+    div.appendChild(addText); 
+
+    document.body.appendChild(div) //It displays the entire content of div element on the webpage.
+</script>
+</html>
