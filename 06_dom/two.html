@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Relations (Parent -> Child and Child -> Parent)</title>
+</head>
+
+<body style="background-color: black; color: yellow;">
+    <div class="parent">
+        <!-- this is a comment --> 
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector(".parent")
+    // console.log(parent);
+    // console.log(parent.children); //It returns a HTML Collection (which is a array like property) with all the childrens inside the div class named "parent".
+    // console.log(parent.children[1].innerHTML); // It returns the element at 1st index i.e. div.day => Tuesday.
+
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML);
+    }
+    parent.children[1].style.color = "Pink";
+    console.log(parent.firstElementChild); // It returns the first entire element of the parent div which is Monday.
+    console.log(parent.lastElementChild); // It returns the last entire element of the parent div which is Thursday.
+
+    const dayOne = document.querySelector(".day"); // It returns the first day which is "Monday".
+    // console.log(dayOne); 
+    // console.log(dayOne.parentElement); // It returns the entire parent element of the child element "Monday".
+    // console.log(dayOne.nextElementSibling); // It returns the next following sibling element (i.e. Tuesday) of the child element "Monday".
+
+    console.log("NODES: ", parent.childNodes); // It return a "NodeList" which contains all the nodes (i.e div) of the parent element. It also includes line breaks. So, it return a big tree structure.
+    
+</script>
+
+</html>
