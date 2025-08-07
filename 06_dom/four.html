@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove DOM Element</title>
+</head>
+<body style="background-color: black; color: yellow;">
+    <div>
+        <ul class="language">
+            <li>JavaScript</li>
+        </ul>        
+    </div>
+</body>
+<script>
+    //Below function is not an optimized way to add an item to the list, it has to traverse the entire DOM tree to add the element.
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.innerHTML= `${langName}` //innerHTML is not recommended because it traverses the entire DOM Tree.
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Java")
+    addLanguage("Python")
+
+    //Below function is a very optimized way to add an item to the list, because it does not have to traverse the entire DOM tree to add the element.
+    //This approach is recommended for big projects.
+    function optimiziedLanguage(languName) {
+        const li = document.createElement('li');
+        const addText = document.createTextNode(languName);
+        li.appendChild(addText); //appendChild is recommended because it does not traverse the entire DOM Tree and saves memory.
+        document.querySelector('.language').appendChild(li);
+    }
+    optimiziedLanguage("TypeScript")
+    optimiziedLanguage("C++")
+
+    //Editing 2nd(Python) element of the DOM Tree without creating new list element.
+    const secondLang = document.querySelector("li:nth-child(2)") //this selects the "python" item from the list.
+    secondLang.innerHTML = "Mojo" //innerHTML only chnages the HTML of the item.
+
+    //below code will create a new list element and using replaceWith() it will be appended at nth-child(2) position. 
+    const newLi = document.createElement('li');
+    newLi.textContent = "Pojo" //textContent is same as innerHTML, but textContent is more optimized.
+    secondLang.replaceWith(newLi); //it will replace the text in 2nd element of the list by taking reference from newLi.
+
+    //Editing 1st(JavaScript) element of list.
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>GoLang</li>' //outerHTML changes the entire outer HTML but we have to write the entire HTML tag in this method.
+
+    //Removing 5th(C++) item from the DOM.
+    const lastLang = document.querySelector("li:last-child"); //it will select the last child from the list.
+    lastLang.remove() // this will delete the C++ item from the list.
+</script>
+</html>
