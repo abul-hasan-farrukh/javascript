@@ -4,6 +4,8 @@
 
 [1st Project -> Click Here](https://dom-project-chaiaurcode-nlcxg1wx.stackblitz.io/1-colorChanger/index.html)
 
+## Project 1 Solution:
+
 ``` javascript
 const buttons = document.querySelectorAll('.button');
 console.log(buttons);
@@ -33,7 +35,7 @@ buttons.forEach(function (button) {
 
 ```
 
-## Project 2 Solution
+## Project 2 Solution:
 
 ``` javascript 
 
@@ -68,3 +70,19 @@ form.addEventListener('submit', function (e) {
 
 
 ```
+
+## Project 3 Solution:
+
+``` 
+const clock = document.querySelector('#clock');
+
+//setInterval() is used to control events in JS, it accepts two parameters, a method and an interval or time to make that method run till specified time.
+setInterval(function () {
+  let date = new Date();
+  //console.log(date.toLocaleTimeString());
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
+
+
+```
+
