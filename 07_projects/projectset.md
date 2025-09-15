@@ -73,7 +73,8 @@ form.addEventListener('submit', function (e) {
 
 ## Project 3 Solution:
 
-``` 
+```javascript
+ 
 const clock = document.querySelector('#clock');
 
 //setInterval() is used to control events in JS, it accepts two parameters, a method and an interval or time to make that method run till specified time.
