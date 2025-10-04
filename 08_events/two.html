@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async with 2 Projects</title>
+</head>
+<body>
+    <h1>Learning Async in JavaScript</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //setTimeout is a method but also calls an API. clearInterval and clearTimeout are part of setTimeout.
+    const Greet = function(){
+        console.log("Hello");   
+    }
+    const changeText = function() {
+        document.querySelector('h1').innerHTML = "JavaScript Async Tutorial"
+    } 
+
+    const chnageMe = setTimeout(changeText, 2000)    
+
+    //below code will stop the execution of setTimeout method, if you click the stop button, before 2000 (2 secs).
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(chnageMe);
+        console.log("Text Stopped");
+    })
+</script>
+</html>
