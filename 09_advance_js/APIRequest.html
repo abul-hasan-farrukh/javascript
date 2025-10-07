@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API and v8 engine</title>
+</head>
+<body style="background-color: black;">
+    0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+</body>
+<script>
+    const requestURL = 'https://api.github.com/users/abul-hasan-farrukh'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestURL); //send GET request to URL.
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState); 
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText) //parse() method converts string to JSON.
+            console.log(typeof data);
+            console.log(data.avatar_url);
+            console.log(data.login);
+        }
+    }
+    xhr.send() //calling the requested URL.  
+</script>
+</html>
