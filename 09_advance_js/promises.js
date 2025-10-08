@@ -116,6 +116,19 @@ consumePromise5() //calling the function
 }
 getAllUsers(); */
 
+
+
+//fetch() is divided in two parts.
+
+//1st is Web Browser to handle Web Browser API or Node requests. It sends a network request which we pass as a URL of an API.
+//If the requests is successfull (for example a 404 error) then it goes in onFullfilled[] array otherwise in onRejection[] array. 
+
+//2nd is Data to be stored in variables and memory. 
+//It contains arrays like onFulfilled[] for resolve and onRejection[] for reject. These arrays can't be accessed directly because they are private so we can't push values in them.  
+
+//After running this file file, you will notice that the fetch() method is getting executed first then other methods declared above are executed in the terminal.
+//This happens because fetch() creates its own special queue known as Micro Task Queue or Priority Queue which is very fast in terms of execution of the tasks.
+
 fetch("https://api.github.com/users/abul-hasan-farrukh")
 .then((response) => {
     return response.json()
