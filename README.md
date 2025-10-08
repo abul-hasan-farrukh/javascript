@@ -1,2 +1,2 @@
 # Javascript
-JavaScript Code Repository from Basics to Advance  
+JavaScript Code Repository for Beginners from Basics to Advance  
