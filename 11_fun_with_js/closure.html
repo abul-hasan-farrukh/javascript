@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure in JavaScript</title>
+</head>
+
+<body style="background-color: black;">
+    <!-- In JavaScript, every function has it's scope. -->
+    <button id="orange">orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    /* function init() {
+        let name = "Mozilla"; // name is a local variable created by init
+        function displayName() {
+            // displayName() is the inner function, that forms a closure
+            console.log(name); // use variable declared in the parent function
+        }
+        displayName();
+    }
+    init(); */
+
+    //Parent  - outer()
+    //Child1 - inner()
+    //Child2 - innerTwo()
+
+    //Parent child se kcuh nhi le skta is maare console.log("Outer", secret); run nhi hoga.
+    //Child1 child2 se sath kuch nhi share kr skta is maare console.log(secret); run nhi hoga
+    //Child1 aur child2 parent se kuch bhi le skte hai is maare console.log("Inner Function", name); run ho jayega. 
+
+    //In lexical scoping, inner function has the access of scope of outer function
+
+    /* function outer(){
+        let name = "Hasan"
+        //console.log("Outer", secret);
+        function inner(){
+            let secret = "John"
+            console.log("Inner Function", name);
+        }
+        function innerTwo(){
+            console.log("Inner Function", name);
+            console.log(secret);
+        }
+        inner()
+        innerTwo()
+    }
+    outer()
+    console.log("TOO OUTER", name); */
+
+    function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        }
+        return displayName; //this line will not only return the displayName() but also it will return the entire lexical scope of the function i.e. makeFunc().
+    }
+
+    const myFunc = makeFunc();
+    myFunc();
+</script>
+
+<script>
+    /* document.getElementById("orange").onclick = function()
+    {
+        document.body.style.backgroundColor = "orange"    
+    }
+
+     document.getElementById("green").onclick = function()
+    {
+        document.body.style.backgroundColor = "green"    
+    } */
+
+    function clickHandler(color){
+            //document.body.style.backgroundColor = `${color}`
+
+            return function(){  //this line will not only return the function() but also it will return the entire lexical scope of the function i.e. clickHandler(), which will enable us to change the backgound of the webpage on click of buttons.
+                document.body.style.backgroundColor = `${color}`
+            }
+    }
+
+    document.getElementById('orange').onclick = clickHandler("orange")
+    document.getElementById('green').onclick = clickHandler("green")
+</script>
+
+</html>
